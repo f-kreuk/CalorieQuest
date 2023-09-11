@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, QueryTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
@@ -43,17 +43,33 @@ User.init(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    height: {
+    heightFeet: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    goalWeight: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+    heightInches: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-    goalDate: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    birthDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    heightCentimeters: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    quests: {
+      type: DataTypes.JSON,
+      defaultValue: { active: [], past: [] },
+    },
+    activeQuest: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
   },
   {
