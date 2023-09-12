@@ -1,0 +1,61 @@
+<div class="active-quest-container">
+  <h2>
+    MY ACTIVE QUEST
+  </h2>
+  <form class="active-quest-stats">
+    <br />
+    <textarea id="current_date" name="current_date" rows="2" cols="30">
+      {{current_date}}
+    </textarea>
+    <br />
+    <label for="description">
+      Current Date:
+    </label>
+    <br />
+    <textarea id="start-weight" name="start-weight" rows="5" cols="30">
+      {{starting_weight}}
+    </textarea>
+    <br />
+    <label for="guest_name">
+      Starting Weight:
+    </label>
+    <br />
+
+       <textarea id="expected-weight" name="expected-weight" rows="5" cols="30">
+      {{expected_weight}}
+    </textarea>
+    <br />
+    <label for="final_weight">
+      Expected Final Weight:
+    </label>
+
+       <textarea id="daily-loss-goal" name="daily-loss-goal" rows="5" cols="30">
+      {{daily_loss_goal}}
+    </textarea>
+    <br />
+    <label for="loss_goal">
+      Daily Loss Goal:
+    </label>
+
+     <textarea id="daily-loss-actual" name="daily-loss-actual" rows="5" cols="30">
+      {{daily_loss_actual}}
+    </textarea>
+    <br />
+    <label for="loss_goal">
+      Daily Loss Actual:
+    </label>
+
+       <textarea id="actual-to-goal" name="actual-to-goal" rows="5" cols="30">
+      {{actual_to_goal}}
+    </textarea>
+    <br />
+    <label for="actual_goal">
+      Actual to Goal:
+    </label>
+    
+    <button type="submit" value="Submit">
+      Next
+    </button>
+  </form>
+</div>
+<script src="/server.js"></script>
