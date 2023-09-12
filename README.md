@@ -34,6 +34,8 @@ Calorie Quest is a web-based calorie tracker app designed to help users manage t
 - CSS
 - JavaScript
 - Tailwind CSS
+- Express JS
+- Express Handlebars
 
 ## Getting Started
 
@@ -42,7 +44,7 @@ To get started with Calorie Quest on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/
+   git clone https://github.com/f-kreuk/CalorieQuest.git
 
 ## Usage
 
