@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ pageTitle }}</title>
     <link rel="stylesheet" href="../css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
+    <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <img src="./assets/CalorieQuestLogo.JPG" alt="CalorieQuest Logo" width="80px" height="auto"/>
         <h1>{{ siteTitle }}</h1>
-        <nav>
+        <nav> 
             <ul>
+                <!-- Conditionally render login or logout links -->
+                 {{#if logged_in}}
+                <li><a href="/profile">profile</a></li> |
+                 <li><button class="no-button" id="logout">logout</button></li>
+                 {{else}}
+                <li><a href="/login">Login</a></li>
+                {{/if}}
+           
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
@@ -18,13 +29,17 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container container-fluid mt-5">
         {{{body}}}
     </main>
 
     <footer>
         <p>&copy; {{ currentYear }} {{ siteTitle }}</p>
     </footer>
-
+    </div>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
