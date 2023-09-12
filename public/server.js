@@ -1,14 +1,19 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs').promises;
+
 const app = express();
 
 const PORT = process.env.PORT || 3001;
+const hbs = exphbs.create({ helpers });
 
 app.use(express.json());
 app.use(express.urlencoded ({extended:true}));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT}`)
-);
+ 
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () =>
+    console.log("Server listening on: http://localhost:" + PORT)
+  );
+});
