@@ -6,7 +6,8 @@
   "scripts": {
     "devStart": "nodemon server.js",
     "watch": "npm run watch",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
