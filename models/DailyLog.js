@@ -10,8 +10,14 @@ DailyLog.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    questID: DataTypes.INTEGER,
-    userID: DataTypes.INTEGER,
+    quest_id: {
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'quest',
+          key: 'id',
+          unique: false,
+      },
+    },
     date: DataTypes.DATE,
     expectedWeight: DataTypes.DECIMAL(6, 2),
     weight: DataTypes.DECIMAL(6, 2),

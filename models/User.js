@@ -63,7 +63,7 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    quests: {
+    allQuests: {
       type: DataTypes.JSON,
       defaultValue: { active: [], past: [] },
     },

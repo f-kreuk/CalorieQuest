@@ -59,7 +59,7 @@ Quest.init(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    userid: {
+    user_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'user',
