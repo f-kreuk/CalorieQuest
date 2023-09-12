@@ -15,7 +15,7 @@
         "expectedFinalWeight": "201",
         "userid": "1",
         "active": "true"
-    }
+    },
     {
         "id": "2",
         "gender": "male",
@@ -32,7 +32,7 @@
         "expectedFinalWeight": "236",
         "userid": "1",
         "active": "false"
-    }
+    },
     {
         "id": "3",
         "gender": "female",
@@ -49,7 +49,7 @@
         "expectedFinalWeight": "201",
         "userid": "2",
         "active": "true"
-    }
+    },
     {
         "id": "4",
         "gender": "female",
