@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "George Burns",
+        "email": "g@burns.com",
+        "password": "password",
+        "startDate": "2023-09-01T18:25:43.511Z",
+        "startingWeight": 85,
+        "heightFeet": 6,
+        "heightInches": 3,
+        "birthDate": "1959-07-08T18:25:43.511Z",
+        "age": 64,
+        "heigthCentimeters": 190.5,
+        "quests": [1, 2],
+        "activeQuest": 1
+    }, 
+    {
+        "id": 2,
+        "name": "Georgina Burnadette",
+        "email": "gina@burni.com",
+        "password": "password",
+        "startDate": "2023-09-01T18:25:43.511Z",
+        "startingWeight": 86,
+        "heightFeet": 5,
+        "heightInches": 1,
+        "birthDate": "1959-07-08T18:25:43.511Z",
+        "age": 64,
+        "heigthCentimeters": 154.94,
+        "quests": [3, 4],
+        "activeQuest": 3
+    }
+]
