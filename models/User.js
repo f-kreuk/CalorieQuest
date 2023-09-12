@@ -37,31 +37,31 @@ User.init(
     },
     startDate: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     startingWeight: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     heightFeet: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     heightInches: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     birthDate: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     age: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     heightCentimeters: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     allQuests: {
       type: DataTypes.JSON,
