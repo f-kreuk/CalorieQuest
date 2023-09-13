@@ -13,19 +13,19 @@ Quest.init(
     },
     age: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     heightCentimeters: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     startingDate: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     startingWeight: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     goalWeight: {
       type: DataTypes.INTEGER,
@@ -33,27 +33,27 @@ Quest.init(
     },
     dailyLossGoal: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     dailyLossActual: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     actualToGoal: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     startingWeightKg: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     progress: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     expectedFinalWeight: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -65,7 +65,7 @@ Quest.init(
     },
     active: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
+        allowNull: true,
     },
   },
   {

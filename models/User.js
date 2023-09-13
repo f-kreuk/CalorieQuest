@@ -53,7 +53,7 @@ User.init(
     },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     birthDate: {
       type: DataTypes.DATE,
