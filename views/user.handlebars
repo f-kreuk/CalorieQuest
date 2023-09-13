@@ -1,28 +1,47 @@
-<div class="user-login-container">
+
+<div class="active-quest-container flex-column justify-space-around justify-center-sm center m-2">
+  <img src="/assets/profileImage.JPG" alt="Profile Picture" width="150px" height="auto">
   <h2>
-    Login
+    MY PROFILE
+    Enter Your Info
   </h2>
-  <img src="/assets/profileImage.JPG" alt="Profile Picture">
-  <form class="user-login-form">
+  <form class="form">
     <br />
-    <textarea id="user_name" name="user_name" rows="2" cols="30">
-      {{user_name}}
+    <textarea id="heightFeet" name="heightFeet" rows="2" cols="30">
+      {{heightFeet}}
     </textarea>
     <br />
     <label for="description">
-      User Name:
+      Height in feet:
     </label>
     <br />
-    <textarea id="password" name="password" rows="5" cols="30">
-      {{password}}
+    <textarea id="heightInches" name="heightInches" rows="5" cols="30">
+      {{heightInches}}
     </textarea>
     <br />
     <label for="guest_name">
-      Password:
+      Height in inches:
     </label>
     <br />
-    <button type="submit" value="Submit">
-        <p><a href="#">Already a member? Login.</a></p>
+
+       <textarea id="gender" name="gender" rows="5" cols="30">
+      {{gender}}
+    </textarea>
+    <br />
+    <label for="final_weight">
+      Gender:
+    </label>
+
+       <textarea id="birthDate" name="birthDate" rows="5" cols="30">
+      {{birthDate}}
+    </textarea>
+    <br />
+    <label for="loss_goal">
+      Birthdate:
+    </label>
+    
+    <button type="submit" value="Submit" class="btn btn-primary">
+      NEW QUEST
     </button>
   </form>
 </div>
