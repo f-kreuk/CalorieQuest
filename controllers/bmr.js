@@ -38,3 +38,9 @@ function checkCalorieStatus(caloricIntake, maintenanceCalories) {
     return `You have consumed ${-calorieDeficit} calories more than needed. Consider adjusting your intake for weight goals.`;
   }
 }
+
+module.exports = {
+    calculateBMRForMen,
+    calculateBMRForWomen,
+    checkCalorieStatus
+};
