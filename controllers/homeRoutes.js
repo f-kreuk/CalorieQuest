@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Quest, DailyLog, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+// added "withAuth" function to redirect false users to login page" 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
