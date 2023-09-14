@@ -1,48 +1,32 @@
 
-<div class="active-quest-container flex-column justify-space-around justify-center-sm center m-2">
-  <img src="/assets/profileImage.JPG" alt="Profile Picture" width="150px" height="auto">
-  <h2>
-    MY PROFILE
-    Enter Your Info
-  </h2>
-  <form class="form">
-    <br />
-    <textarea id="heightFeet" name="heightFeet" rows="2" cols="30">
-      {{heightFeet}}
-    </textarea>
-    <br />
-    <label for="description">
-      Height Feet:
-    </label>
-    <br />
-    <textarea id="heightInches" name="heightInches" rows="5" cols="30">
-      {{heightInches}}
-    </textarea>
-    <br />
-    <label for="guest_name">
-      Height Inches:
-    </label>
-    <br />
+<div class="row">
+  <div class="col-md-12">
+    <h2>LOGIN</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <input class="form-input" type="text" id="height-feet" placeholder="heightFt"/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="password" id="height-inches" placeholder="heightIn"/>
+      </div>
+          <div class="form-group">
+        <input class="form-input" type="password" id="gender" placeholder="gender"/>
+      </div>
+               <div class="form-group">
+        <input class="form-input" type="password" id="birthdate" placeholder="birthDate"/>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">New Quest</button>
+      </div>
+    </form>
+  </div>
 
-       <textarea id="gender" name="gender" rows="5" cols="30">
-      {{gender}}
-    </textarea>
-    <br />
-    <label for="final_weight">
-      Gender:
-    </label>
 
-       <textarea id="birthDate" name="birthDate" rows="5" cols="30">
-      {{birthDate}}
-    </textarea>
-    <br />
-    <label for="loss_goal">
-      Birthdate:
-    </label>
-    
-    <button type="submit" value="Submit" class="btn btn-primary">
-      NEW QUEST
-    </button>
-  </form>
-</div>
-<script src="./js/login.js"></script>
+
+
+
+
+
+
+
+
