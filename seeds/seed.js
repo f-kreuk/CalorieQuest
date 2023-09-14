@@ -7,19 +7,19 @@ const seedDatabase = async () => {
 
   try {
     // Read and parse user data from userData.json
-    const userData = JSON.parse(await fs.readFile('userData.json', 'utf8'));
+    const userData = JSON.parse(await fs.readFile('seeds/userData.json', 'utf8'));
 
     // Create users
     await User.bulkCreate(userData);
 
     // Read and parse quest data from questData.json
-    const questData = JSON.parse(await fs.readFile('questData.json', 'utf8'));
+    const questData = JSON.parse(await fs.readFile('seeds/questData.json', 'utf8'));
 
     // Create quests
     await Quest.bulkCreate(questData);
 
     // Read and parse daily log data from dailyLogData.json
-    const dailyLogData = JSON.parse(await fs.readFile('dailyLogData.json', 'utf8'));
+    const dailyLogData = JSON.parse(await fs.readFile('seeds/dailyLogData.json', 'utf8'));
 
     // Create daily logs
     await DailyLog.bulkCreate(dailyLogData);
