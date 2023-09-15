@@ -50,6 +50,39 @@ router.get('/quest/:id', async (req, res) => {
   }
 });
 
+// Add a new route for viewing a specific daily log entry
+router.get('/dailyLog/:id', withAuth, async (req, res) => {
+  try {
+    // Retrieve the daily log data based on the :id parameter
+    const dailyLogId = req.params.id;
+    const dailyLogData = await DailyLog.findByPk(dailyLogId, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // If the daily log entry doesn't exist, handle it appropriately (e.g., show a 404 page)
+    if (!dailyLogData) {
+      res.status(404).render('notfound'); // You can create a 'notfound.handlebars' template
+      return;
+    }
+
+    // Serialize data so the template can read it
+    const dailyLog = dailyLogData.get({ plain: true });
+
+    // Render the dailyLog.handlebars template with the daily log data
+    res.render('dailyLog', {
+      ...dailyLog,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
