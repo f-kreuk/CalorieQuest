@@ -13,11 +13,18 @@
     <header class="display-flex justify-space-between align-center justify-center-sm center p-12">
         <img src="./assets/CalorieQuestLogoFull.JPG" alt="CalorieQuest Logo" width="150px" height="auto" class="w-90 h-45 object-cover transition-transform transform hover:scale-105 shadow-2xl shadow-2xl shadow-slate-800 hover:shadow-indigo-800"/>
         <h1>{{ siteTitle }}</h1>
-        <nav> 
-            <ul>
+    </header>
+
+    <main class="container container-fluid mt-5">
+        {{{body}}}
+    </main>
+
+    <footer class="fixed bottom-0 w-full bg-gray-300 p-4">
+        <nav class="text-center">
+            <ul class="flex justify-center">
                   {{#if logged_in}}
-                <li><a href="/profile">profile</a></li> |
-                 <li><button class="no-button" id="logout">logout</button></li>
+                <a href="/profile">Profile</a>|
+                 <li><button class="no-button" id="logout">Logout</button></li>
                  {{else}}
                 <li><a href="/login"></a></li>
                 {{/if}}
@@ -27,13 +34,6 @@
                 <li><a href="/contact">Contact</a></li> --}}
              </ul>
         </nav>
-    </header>
-
-    <main class="container container-fluid mt-5">
-        {{{body}}}
-    </main>
-
-    <footer>
         <p>&copy; {{ currentYear }} {{ siteTitle }}</p>
     </footer>
     </div>
