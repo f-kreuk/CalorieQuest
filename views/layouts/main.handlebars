@@ -6,11 +6,12 @@
     <title>{{ pageTitle }}</title>
     <link rel="stylesheet" href="../css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <div class="flex-column justify-space-around justify-center-sm center m-2">
     <header class="display-flex justify-space-between align-center justify-center-sm center p-12">
-        <img src="./assets/CalorieQuestLogoFull.JPG" alt="CalorieQuest Logo" width="150px" height="auto"/>
+        <img src="./assets/CalorieQuestLogoFull.JPG" alt="CalorieQuest Logo" width="150px" height="auto" class="shadow-2xl shadow-slate-800 hover:shadow-indigo-800"/>
         <h1>{{ siteTitle }}</h1>
         <nav> 
             <ul>
@@ -18,7 +19,7 @@
                 <li><a href="/profile">profile</a></li> |
                  <li><button class="no-button" id="logout">logout</button></li>
                  {{else}}
-                <li><a href="/login">Login</a></li>
+                <li><a href="/login"></a></li>
                 {{/if}}
            
                 {{!-- <li><a href="/">Home</a></li>
