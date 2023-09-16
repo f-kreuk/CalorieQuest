@@ -15,6 +15,14 @@ Quest.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    heightFt: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    heightIn: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
     heightCentimeters: {
       type: DataTypes.INTEGER,
       allowNull: true,
