@@ -8,6 +8,8 @@ const newFormHandler = async (event) => {
   const startingDate = document.querySelector('#startingDate-profile').value.trim();
   const startingWeight = document.querySelector('#startingWeight-profile').value.trim();
   const goalWeight = document.querySelector('#goalWeight-profile').value.trim();
+  
+
 
   if (heightFt && heightIn && gender && age && startingDate && startingWeight && goalWeight) {
     const response = await fetch(`/api/quest`, {
