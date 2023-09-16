@@ -18,6 +18,13 @@ DailyLog.init(
           unique: false,
       },
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
     date: DataTypes.DATE,
     expectedWeight: DataTypes.DECIMAL(6, 2),
     weight: DataTypes.DECIMAL(6, 2),
