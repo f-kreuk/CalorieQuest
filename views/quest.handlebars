@@ -1,0 +1,59 @@
+
+<div class="row">
+
+  <div class="col-md-6">
+  <h2>MY QUEST</h2>
+  <br>
+  <h2>{{current_date}}</h2>
+
+    <div class="row">
+
+      <div class="col-md-9">
+        <h3 class="startingWeight">Starting Weight: {{starting_weight}}</h3>
+        <h3 class="expectedWeight">Expected Weight: {{expected_weight}}</h3>
+        <h3 class="dailyLossGoal">Daily Loss Goal: {{daily_loss_goal}}</h3>
+        <h3 class="dailyLossActual">Actual Daily Loss: {{daily_loss_actual}}</h3>
+        <h3 class="actualToGoal">Actual Loss vs. Goal: {{actual_to_goal}}</h3>
+      </div>
+
+      <div class="col-md-3">
+        <h2>PROGRESS</h2>
+        <p class="progress">{{progress}}</p>
+      </div>
+    
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <form class="form dailyLog-form">
+      <div class="form-group">
+        <input class="form-input" type="date" id="date" placeholder="Date"/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="number" id="weight" placeholder="Weight (lbs)"/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="number" id="calories" placeholder="Calories"/>
+      </div>
+      
+        <div class="row">
+            <div class="col-md-9">
+              <p>Check if you exercised for this Daily Log:</p>
+            </div>
+      
+          <div class="col-md-3">
+            <div class="form-group">
+              <input class="form-input" type="checkbox" id="exercise" placeholder="Exercise"/>
+            </div>
+          </div>  
+         
+          <div class="col-md-12">
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Daily Log</button>
+            </div>
+          </div>
+        </div>
+    </form>
+  </div>  
+  
+</div>
