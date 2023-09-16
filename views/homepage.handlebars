@@ -1,62 +1,59 @@
-<div class="active-quest-container">
-  <h2>
-    MY ACTIVE QUEST
-  </h2>
-  <form class="active-quest-stats">
-    <br />
-    <textarea id="current_date" name="current_date" rows="2" cols="30">
-      {{current_date}}
-    </textarea>
-    <br />
-    <label for="description">
-      Current Date:
-    </label>
-    <br />
-    <textarea id="start-weight" name="start-weight" rows="5" cols="30">
-      {{starting_weight}}
-    </textarea>
-    <br />
-    <label for="guest_name">
-      Starting Weight:
-    </label>
-    <br />
 
-       <textarea id="expected-weight" name="expected-weight" rows="5" cols="30">
-      {{expected_weight}}
-    </textarea>
-    <br />
-    <label for="final_weight">
-      Expected Final Weight:
-    </label>
+<div class="row">
 
-       <textarea id="daily-loss-goal" name="daily-loss-goal" rows="5" cols="30">
-      {{daily_loss_goal}}
-    </textarea>
-    <br />
-    <label for="loss_goal">
-      Daily Loss Goal:
-    </label>
+  <div class="col-md-6">
+  <h2>MY QUEST</h2>
+  <br>
+  <h2>{{current_date}}</h2>
 
-     <textarea id="daily-loss-actual" name="daily-loss-actual" rows="5" cols="30">
-      {{daily_loss_actual}}
-    </textarea>
-    <br />
-    <label for="loss_goal">
-      Daily Loss Actual:
-    </label>
+    <div class="row">
 
-       <textarea id="actual-to-goal" name="actual-to-goal" rows="5" cols="30">
-      {{actual_to_goal}}
-    </textarea>
-    <br />
-    <label for="actual_goal">
-      Actual to Goal:
-    </label>
+      <div class="col-md-9">
+        <h3 class="startingWeight">Starting Weight: {{starting_weight}}</h3>
+        <h3 class="expectedWeight">Expected Weight: {{expected_weight}}</h3>
+        <h3 class="dailyLossGoal">Daily Loss Goal: {{daily_loss_goal}}</h3>
+        <h3 class="dailyLossActual">Actual Daily Loss: {{daily_loss_actual}}</h3>
+        <h3 class="actualToGoal">Actual Loss vs. Goal: {{actual_to_goal}}</h3>
+      </div>
+
+      <div class="col-md-3">
+        <h2>PROGRESS</h2>
+        <p class="progress">{{progress}}</p>
+      </div>
     
-    <button type="submit" value="Submit">
-      Next
-    </button>
-  </form>
-
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <form class="form dailyLog-form">
+      <div class="form-group">
+        <input class="form-input" type="date" id="date" placeholder="Date"/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="number" id="weight" placeholder="Weight (lbs)"/>
+      </div>
+      <div class="form-group">
+        <input class="form-input" type="number" id="calories" placeholder="Calories"/>
+      </div>
+      
+        <div class="row">
+            <div class="col-md-9">
+              <p>Check if you exercised for this Daily Log:</p>
+            </div>
+      
+          <div class="col-md-3">
+            <div class="form-group">
+              <input class="form-input" type="checkbox" id="exercise" placeholder="Exercise"/>
+            </div>
+          </div>  
+         
+          <div class="col-md-12">
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Add Daily Log</button>
+            </div>
+          </div>
+        </div>
+    </form>
+  </div>  
   
 </div>
