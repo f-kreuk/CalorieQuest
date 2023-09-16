@@ -41,7 +41,7 @@ router.get('/quest/:id', async (req, res) => {
 
     const quest = questData.get({ plain: true });
 
-    res.render('activequest', {
+    res.render('homepage', {
       ...quest,
       logged_in: req.session.logged_in
     });
