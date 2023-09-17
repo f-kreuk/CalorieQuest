@@ -12,67 +12,74 @@ Quest.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     age: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: true,
     },
-    heightFt: {
-      type: DataTypes.INTEGER,
+    height_ft: {
+      type: DataTypes.FLOAT,
       allowNull: true,
     },
-    heightIn: {
-      type: DataTypes.INTEGER,
+    height_in: {
+      type: DataTypes.FLOAT,
       allowNull: true,
     },
-    heightCentimeters: {
-      type: DataTypes.INTEGER,
+    height_centimeters: {
+      type: DataTypes.FLOAT,
       allowNull: true,
     },
-    startingDate: {
+    starting_date: {
       type: DataTypes.DATE,
       allowNull: true,
     },
-    startingWeight: {
-      type: DataTypes.INTEGER,
+    date_label: {
+      type: DataTypes.TEXT,
       allowNull: true,
     },
-    goalWeight: {
-      type: DataTypes.INTEGER,
+    starting_weight: {
+      type: DataTypes.FLOAT,
       allowNull: true,
     },
-    dailyLossGoal: {
-        type: DataTypes.INTEGER,
+    goal_weight: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    daily_loss_goal: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    dailyLossActual: {
-        type: DataTypes.INTEGER,
+    daily_loss_actual: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    actualToGoal: {
-        type: DataTypes.INTEGER,
+    actual_to_goal: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    startingWeightKg: {
-        type: DataTypes.INTEGER,
+    starting_weight_kg: {
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
     progress: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         allowNull: true,
     },
-    expectedFinalWeight: {
-        type: DataTypes.INTEGER,
+    expected_final_weight: {
+        type: DataTypes.FLOAT,
         allowNull: true,
+    },
+    gender: {
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     user_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'user',
             key: 'id',
-            unique: false,
         },
     },
     active: {
@@ -82,6 +89,7 @@ Quest.init(
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'quest',

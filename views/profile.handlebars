@@ -1,77 +1,72 @@
 
 <div class="row">
   <div class="col-md-6">
-  <h2>Submit your current information and launch a new Quest!</h2>
+  <h2><span class = "profile-name font-bold">{{name}}</span>, submit your current information and launch a new Quest!</h2>
  
-  <div class="row">
-    <div class="col-md-6">
-      <form class="form profile-form">
-        <div class="form-group">
-          <input class="form-input" type="number" id="heightFt-profile" placeholder="Height (ft)"/>
-        </div>
-        <div class="form-group">
-          <input class="form-input" type="number" id="heightIn-profile" placeholder="Height (in)"/>
-        </div>
-            <div class="form-group">
-          <input class="form-input" type="text" id="gender-profile" placeholder="Gender"/>
-        </div>
-          <div class="form-group">
-          <input class="form-input" type="number" id="age-profile" placeholder="Age"/>
-        </div>
-      </form>
-    </div>
-
+ <form class="form new-quest-form">
+    <div class="row">
       <div class="col-md-6">
-        <form class="form profile-form">
-          <div class="form-group">
-            <p>Enter the starting date for your quest below.</p>
-          </div>
-          <div class="form-group">
-            <input class="form-input" type="date" id="startingDate-profile" placeholder="Starting Date"/>
-          </div>
-          <div class="form-group">
-            <input class="form-input" type="number" id="startingWeight-profile" placeholder="Starting Weight"/>
-          </div>
-              <div class="form-group">
-            <input class="form-input" type="number" id="goalWeight-profile" placeholder="Goal Weight"/>
-          </div>
-        </form>
+        <div class="form-group">
+          <input class="form-input" type="number" id="height_ft" name="height_ft" placeholder="Height (ft)"/>
         </div>
+        <div class="form-group">
+          <input class="form-input" type="number" id="height_in" name="height_in" placeholder="Height (in)"/>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="text" id="gender" name="gender" placeholder="Gender"/>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="number" id="age" name="age" placeholder="Age"/>
+        </div>
+      </div>
+        
+      <div class="col-md-6">
+        <div class="form-group">
+          <p>Enter the starting date for your quest below.</p>
+       </div>
+        <div class="form-group">
+          <input class="form-input" type="date" id="starting_date" name="starting_date"/>
+       </div>
+        <div class="form-group">
+          <input class="form-input" type="number" id="starting_weight" name="starting_weight" placeholder="Starting Weight"/>
+       </div>
+        <div class="form-group">
+         <input class="form-input" type="number" id="goal_weight" name="goal_weight" placeholder="Goal Weight"/>
+       </div>
+     </div>
 
-
-        <div class="col-md-12">
-          <form class="form profile-form">
-              <div class="form-group">
-                <button class="btn btn-primary" type="submit">NEW ACTIVE QUEST</button>
-              </div>
-          </form>
+      <div class="col-md-12">
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">NEW QUEST</button>
         </div>
       </div>
     </div>
+  </form>     
+  </div>
   
   <div class="col-md-6">
     {{#if quests.length}}
-  <div class="col-md-6 quest-list">
-    <h3>QUESTS</h3>
+    <div class="col-md-6 quest-list">
+      <h2 class="b"><span class = "profile-name font-bold">QUESTS</span></h2>
+      <br>
 
     {{#each quests as |quest|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/quest/{{quest.id}}">{{quest.startignDate}}</a></h4>
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
+        </div>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
-      </div>
-    </div>
     {{/each}}
-  </div>
-  {{/if}}
+    </div>
+    {{/if}}
 
   </div>      
 </div>
-  </div>
 
-
+<script src="./js/profile.js"></script>
 
 
 
