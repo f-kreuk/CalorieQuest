@@ -35,6 +35,10 @@ Quest.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
+    date_label: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     starting_weight: {
       type: DataTypes.FLOAT,
       allowNull: true,

@@ -47,12 +47,13 @@
   <div class="col-md-6">
     {{#if quests.length}}
     <div class="col-md-6 quest-list">
-      <h3>QUESTS</h3>
+      <h2 class="b">QUESTS</h2>
+      <br>
 
     {{#each quests as |quest|}}
       <div class="row mb-2">
         <div class="col-md-8">
-          <h4><a href="/quest/{{quest.id}}">{{quest.starting_date}}</a></h4>
+          <h4><a href="/quest/{{quest.id}}">{{quest.date_label}} Quest - Goal: {{quest.goal_weight}}lbs</a></h4>
         </div>
         <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
