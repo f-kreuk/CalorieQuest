@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-md-6">
-  <h2>{{name}}, submit your current information and launch a new Quest!</h2>
+  <h2><span class = "profile-name font-bold">{{name}}</span>, submit your current information and launch a new Quest!</h2>
  
  <form class="form new-quest-form">
     <div class="row">
@@ -47,13 +47,13 @@
   <div class="col-md-6">
     {{#if quests.length}}
     <div class="col-md-6 quest-list">
-      <h2 class="b">QUESTS</h2>
+      <h2 class="b"><span class = "profile-name font-bold">QUESTS</span></h2>
       <br>
 
     {{#each quests as |quest|}}
       <div class="row mb-2">
         <div class="col-md-8">
-          <h4><a href="/quest/{{quest.id}}">{{quest.date_label}} Quest - Goal: {{quest.goal_weight}}lbs</a></h4>
+          <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
         </div>
         <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>

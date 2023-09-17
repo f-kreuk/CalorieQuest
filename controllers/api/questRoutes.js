@@ -20,8 +20,8 @@ router.post('/', withAuth, async (req, res) => {
     const { starting_date, ...otherFields } = req.body;
     const date = new Date(starting_date);
     const month = date.toLocaleString('default', { month: 'short' });
-    const day = date.getDate();
-    const monthDate = `${month}-${day}`;
+    const year = date.toLocaleString('default', { year: 'numeric' });
+    const monthDate = `${month}-${year}`;
     const newQuest = await Quest.create({
       ...otherFields,
       date_label: monthDate,
