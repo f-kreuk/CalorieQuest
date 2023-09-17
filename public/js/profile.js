@@ -1,15 +1,21 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const height_ft = document.querySelector('#heightFt-profile').value.trim();
-  const height_in = document.querySelector('#heightIn-profile').value.trim();
-  const gender = document.querySelector('#gender-profile').value.trim();
-  const age = document.querySelector('#age-profile').value.trim();
-  const starting_date = document.querySelector('#startingDate-profile').value.trim();
-  const starting_weight = document.querySelector('#startingWeight-profile').value.trim();
-  const goal_weight = document.querySelector('#goalWeight-profile').value.trim();
+  const height_ft = document.querySelector('#height_ft').value.trim();
+  const height_in = document.querySelector('#height_in').value.trim();
+  const gender = document.querySelector('#gender').value.trim();
+  const age = document.querySelector('#age').value.trim();
+  const starting_date = document.querySelector('#starting_date').value.trim();
+  const starting_weight = document.querySelector('#starting_weight').value.trim();
+  const goal_weight = document.querySelector('#goal_weight').value.trim();
   
-
+  console.log(height_ft);
+  console.log(height_in);
+  console.log(gender);
+  console.log(age);
+  console.log(starting_date);
+  console.log(starting_weight);
+  console.log(goal_weight);
 
   if (height_ft && height_in && gender && age && starting_date && starting_weight && goal_weight) {
     const response = await fetch(`/api/quests`, {

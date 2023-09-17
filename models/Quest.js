@@ -12,8 +12,8 @@ Quest.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     age: {
       type: DataTypes.FLOAT,
@@ -68,7 +68,7 @@ Quest.init(
         allowNull: true,
     },
     gender: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     user_id: {
