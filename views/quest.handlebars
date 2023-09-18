@@ -24,7 +24,7 @@
 
       <div class="col-md-3">
         <h2></h2>
-        <p class="progress">{{quest.progress}}</p>
+        <p class="progress">{{progress}}</p>
       </div>
 
     </div>
@@ -68,7 +68,7 @@
 <div class="col-md-12">
   {{#if dailylogs.length}}
   <div class="col-md-12 dailylog-list">
-    <h2 class="b"><span class="profile-name font-bold">DAILY LOGS</span></h2>
+    <h2 class="b"><span class="profile-name font-bold">Daily Logs</span></h2>
     <br>
   </div>
 </div>
@@ -104,16 +104,16 @@
     <div class="col-md-10">
       <div class="row">
         <div class="col-md-3 border-white border-4 bg-gray-50">
-          <p>D{{dailylog.date}}</p>
+          <p>Date{{date}}</p>
         </div>
         <div class="col-md-3 border-white border-4 bg-gray-50">
-          <p>W{{dailylog.weight}} lbs</p>
+          <p>{{weight}}</p>
         </div>
         <div class="col-md-3 border-white border-4 bg-gray-50">
-          <p>CC{{dailylog.calories_consumed}}</p>
+          <p>{{calories_consumed}}</p>
         </div>
         <div class="col-md-3 border-white border-4 bg-gray-50">
-          <p>D{{dailylog.exercise}}</p>
+          <p>{{exercise}}</p>
         </div>
       </div>
     </div>
