@@ -24,6 +24,7 @@ router.post('/', withAuth, async (req, res) => {
       ...otherFields,
       date_label: monthDate,
       height_centimeters: heightInCm,
+      active: true,
       user_id: req.session.user_id,
 });
     res.status(200).json(newQuest);

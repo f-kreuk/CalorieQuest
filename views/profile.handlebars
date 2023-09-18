@@ -54,15 +54,31 @@
       <br>
 
     {{#each quests as |quest|}}
+      {{#if quest.active}}
       <div class="row mb-2">
-        <div class="col-md-8">
+        <div class="col-md-8 rounded-md bg-green-200">
           <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
         </div>
         <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
         </div>
       </div>
+      {{/if}}
     {{/each}}
+
+        {{#each quests as |quest|}}
+      {{#unless quest.active}}
+      <div class="row mb-2">
+        <div class="col-md-8 rounded-md bg-neutral-300">
+          <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
+        </div>
+      </div>
+      {{/unless}}
+    {{/each}}
+
     </div>
     {{/if}}
 
