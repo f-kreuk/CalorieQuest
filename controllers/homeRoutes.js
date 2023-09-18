@@ -26,26 +26,39 @@ router.get('/', async (req, res) => {
 
 router.get('/quest/:id', async (req, res) => {
   try {
-    const questData = await Quest.findByPk(req.params.id, {
+    const questId = req.params.id;
+    const quest = await Quest.findByPk(questId, {
       include: [
         {
-          model: User,
-          attributes: ['name'],
+        model: User,
+        attributes: ['name'],
         },
       ],
     });
 
-    const quest = questData.get({ plain: true});
-
-    res.render('quest', {
-      ...quest,
-      logged_in: req.session.logged_in
+    if (!quest) {
+      return res.status(404).send('Quest not found');
+    }
+        const dailylogs = await DailyLog.findAll({
+      where: {
+        quest_id: questId,
+      },
     });
+
+    const quest2 = quest.get({ plain: true});
+    //console.log(dailylogs);
+
+    res.render('quest', { 
+      ...quest2,
+      quest,
+      dailylogs,
+      logged_in: req.session.logged_in });
+      console.log(dailylogs); 
   } catch (err) {
-    res.status(500).json(err);
+    console.error(err);
+    res.status(500).send('Server Error');
   }
 });
-
 
 // added "withAuth" function to redirect false users to login page" 
 router.get('/', async (req, res) => {

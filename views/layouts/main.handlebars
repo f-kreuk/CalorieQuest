@@ -11,7 +11,7 @@
 <body>
     <div class="flex-column justify-space-around justify-center-sm center m-2">
     <header class="display-flex justify-space-between align-center justify-center-sm center p-12">
-        <img src="./assets/CalorieQuestLogoFULL.JPG" alt="CalorieQuest Logo" width="120px" height="auto" class="w-90 h-45 {{!--object-cover transition-transform transform hover:scale-105 shadow-2xl shadow-2xl shadow-slate-800 hover:shadow-indigo-800--}}"/>
+        <img src="../../assets/CalorieQuestLogoFULL.JPG" alt="CalorieQuest Logo" width="120px" height="auto"/>
         <h1>{{ siteTitle }}</h1>
     </header>
 
@@ -22,16 +22,13 @@
     <footer class="fixed bottom-0 w-full bg-gray-300 p-4">
         <nav class="text-center">
             <ul class="flex justify-center">
-                  {{#if logged_in}}
+                {{#if logged_in}}
                 <a href="/profile">Profile</a>|
                  <li><button class="no-button" id="logout">Logout</button></li>
                  {{else}}
                 <li><a href="/login"></a></li>
                 {{/if}}
-           
-                {{!-- <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li> --}}
+
              </ul>
         </nav>
         <p>&copy; 2023 CalorieQuest{{ currentYear }} {{ siteTitle }}</p>
