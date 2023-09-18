@@ -151,6 +151,8 @@
   button,
   input,
   input::placeholder,
+  #gender::placeholder,
+  #starting_date::placeholder,
   optgroup,
   select,
   textarea {
