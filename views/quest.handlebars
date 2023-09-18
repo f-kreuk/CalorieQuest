@@ -1,82 +1,137 @@
-
 <div class="row">
 
   <div class="col-md-6">
-  <h2><span class = "profile-name font-bold">{{date_label}} Quest</span></h2>
-  <br>
+    <h2><span class="profile-name font-bold">{{date_label}} Quest</span></h2>
+    <br>
 
 
     <div class="row">
 
       <div class="col-md-9">
-        <h3 class="startingWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Starting Weight:</span> {{starting_weight}} lbs</h3>
+        <h3 class="startingWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span
+            class="profile-name">Starting Weight:</span> {{starting_weight}} lbs</h3>
         <br>
-        <h3 class="goalWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Goal Weight:</span> {{goal_weight}} lbs</h3>
+        <h3 class="goalWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Goal
+            Weight:</span> {{goal_weight}} lbs</h3>
         <br>
-        <h3 class="age rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Age:</span> {{age}}</h3>
+        <h3 class="age rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Age:</span>
+          {{age}}</h3>
         <br>
-        <h3 class="gender rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Gender:</span> {{gender}}</h3>
+        <h3 class="gender rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Gender:</span>
+          {{gender}}</h3>
 
       </div>
 
       <div class="col-md-3">
         <h2></h2>
-        <p class="progress">{{progress}}</p>
+        <p class="progress">{{quest.progress}}</p>
       </div>
-    
+
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <form class="form dailyLog-form">
       <div class="form-group">
-        <input class="form-input" type="date" id="date" name="date" placeholder="Date"/>
+        <input class="form-input" type="date" id="date" name="date" placeholder="Date" />
       </div>
       <div class="form-group">
-        <input class="form-input" type="number" step="0.01" id="weight" name="weight" placeholder="Weight (lbs)"/>
+        <input class="form-input" type="number" step="0.01" id="weight" name="weight" placeholder="Weight (lbs)" />
       </div>
       <div class="form-group">
-        <input class="form-input" type="number" step="0.01" id="calories_consumed" name="calories_consumed" placeholder="Calories consumed on this date."/>
+        <input class="form-input" type="number" step="0.01" id="calories_consumed" name="calories_consumed"
+          placeholder="Calories consumed on this date." />
       </div>
       <div class="form-group">
         <label for="exercise" class="text-base">Select days exercised in last week below.</label>
-        <select class="form-input" type="number" id="excerise" name="exercise" placeholder="Days exercised in last week."/>
-         <option value="0">0</option>
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-         <option value="6">6</option>
-         <option value="7">7</option>
+        <select class="form-input" type="number" id="excerise" name="exercise"
+          placeholder="Days exercised in last week." />
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
         </select>
       </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit">Add Daily Log</button>
       </div>
-          </div>
-        </div>
-    </form>
-  </div>  
-  
-<div class="col-md-6">
-    {{#if dailylogs.length}}
-    <div class="col-md-6 quest-list">
-      <h2 class="b"><span class="profile-name font-bold">DAILY LOGS</span></h2>
-      <br>
+  </div>
+</div>
+</form>
+</div>
+<br>
 
-      {{#each dailylogs as |dailylog|}}
-        <div class="row mb-2">
-          <div class="col-md-8">
-            <h4>Date: {{dailylog.date}}</h4>
-            <p>Weight: {{dailylog.weight}} lbs</p>
-            <p>Calories Consumed: {{dailylog.calories_consumed}}</p>
-            <p>Days Exercised: {{dailylog.exercise}}</p>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-    {{/if}}
+<div class="col-md-12">
+  {{#if dailylogs.length}}
+  <div class="col-md-12 dailylog-list">
+    <h2 class="b"><span class="profile-name font-bold">DAILY LOGS</span></h2>
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"><br>
   </div>
 
+  <div class="col-md-10">
+    <div class="row">
+      <div class="col-md-3 profile-name font-bold rounded-md bg-slate-100 border-white border-4">
+        <p>Date</p>
+      </div>
+      <div class="col-md-3 profile-name font-bold rounded-md bg-slate-100 border-white border-4">
+        <p>Weight</p>
+      </div>
+      <div class="col-md-3 profile-name font-bold rounded-md bg-slate-100 border-white border-4">
+        <p>Calories Consumed</p>
+      </div>
+      <div class="col-md-3 profile-name font-bold rounded-md bg-slate-100 border-white border-4">
+        <p>Days Exercised</p>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+
+
+  {{#each dailylogs as |dailylog|}}
+  <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-1"><br></div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-3 border-white border-4 bg-gray-50">
+          <p>D{{dailylog.date}}</p>
+        </div>
+        <div class="col-md-3 border-white border-4 bg-gray-50">
+          <p>W{{dailylog.weight}} lbs</p>
+        </div>
+        <div class="col-md-3 border-white border-4 bg-gray-50">
+          <p>CC{{dailylog.calories_consumed}}</p>
+        </div>
+        <div class="col-md-3 border-white border-4 bg-gray-50">
+          <p>D{{dailylog.exercise}}</p>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-1"></div>
+</div>
+</div>
+{{/each}}
+</div>
+{{/if}}
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
 </div>
