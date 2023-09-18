@@ -5,7 +5,7 @@ class DailyLog extends Model {}
 
 DailyLog.init(
   {
-    dailyLogID: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -30,7 +30,7 @@ DailyLog.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    expectedWeight: {
+    expected_weight: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
@@ -38,15 +38,15 @@ DailyLog.init(
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
-    caloriesConsumed: {
+    calories_consumed: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
     exercise: {
-      type: DataTypes.DECIMAL(6, 2),
+      type: DataTypes.TEXT,
       allowNull: true,
     },
-    dailyWeightLoss: {
+    daily_weight_loss: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
@@ -54,27 +54,27 @@ DailyLog.init(
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
-    adjustedBMR: {
+    adjusted_bmr: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
-    exerciseReference: {
+    exercise_reference: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
-    dailyGoal: {
+    daily_goal: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },
-    targetCalories: {
+    target_calories: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
+    calorie_deficit: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    calorieDeficit: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    actualToDeficit: {
+    actual_to_deficit: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
     },

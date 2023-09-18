@@ -2,9 +2,9 @@
 <div class="row">
 
   <div class="col-md-6">
-  <h2>MY QUEST</h2>
+  <h2><span class = "profile-name font-bold">{{date_label}} Quest</span></h2>
   <br>
-  <h2>{{name}}</h2>
+
 
     <div class="row">
 
@@ -27,30 +27,30 @@
   <div class="col-md-6">
     <form class="form dailyLog-form">
       <div class="form-group">
-        <input class="form-input" type="date" id="date" placeholder="Date"/>
+        <input class="form-input" type="date" id="date" name="date" placeholder="Date"/>
       </div>
       <div class="form-group">
-        <input class="form-input" type="number" id="weight" placeholder="Weight (lbs)"/>
+        <input class="form-input" type="number" step="0.01" id="weight" name="weight" placeholder="Weight (lbs)"/>
       </div>
       <div class="form-group">
-        <input class="form-input" type="number" id="calories" placeholder="Calories"/>
+        <input class="form-input" type="number" step="0.01" id="calories_consumed" name="calories_consumed" placeholder="Calories consumed on this date."/>
       </div>
-      
-        <div class="row">
-            <div class="col-md-9">
-              <p>Check if you exercised for this Daily Log:</p>
-            </div>
-      
-          <div class="col-md-3">
-            <div class="form-group">
-              <input class="form-input" type="checkbox" id="exercise" placeholder="Exercise"/>
-            </div>
-          </div>  
-         
-          <div class="col-md-12">
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit">Add Daily Log</button>
-            </div>
+      <div class="form-group">
+        <label for="exercise" class="text-base">Select days exercised in last week below.</label>
+        <select class="form-input" type="number" id="excerise" name="exercise" placeholder="Days exercised in last week."/>
+         <option value="0">0</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Add Daily Log</button>
+      </div>
           </div>
         </div>
     </form>

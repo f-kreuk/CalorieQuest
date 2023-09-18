@@ -31,10 +31,10 @@
           <input class="form-input" type="date" id="starting_date" name="starting_date"/>
        </div>
         <div class="form-group">
-          <input class="form-input" type="number" id="starting_weight" name="starting_weight" placeholder="Starting Weight"/>
+          <input class="form-input" type="number" id="starting_weight" step="0.01" name="starting_weight" placeholder="Starting Weight"/>
        </div>
         <div class="form-group">
-         <input class="form-input" type="number" id="goal_weight" name="goal_weight" placeholder="Goal Weight"/>
+         <input class="form-input" type="number" id="goal_weight" name="goal_weight" step="0.01" placeholder="Goal Weight"/>
        </div>
      </div>
 
@@ -56,7 +56,7 @@
     {{#each quests as |quest|}}
       {{#if quest.active}}
       <div class="row mb-2">
-        <div class="col-md-8 rounded-md bg-green-200">
+        <div class="col-md-8 rounded-md bg-slate-100 align-middle">
           <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
         </div>
         <div class="col-md-4">
@@ -69,7 +69,7 @@
         {{#each quests as |quest|}}
       {{#unless quest.active}}
       <div class="row mb-2">
-        <div class="col-md-8 rounded-md bg-neutral-300">
+        <div class="col-md-8 rounded-md bg-neutral-300 align-middle">
           <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
         </div>
         <div class="col-md-4">
