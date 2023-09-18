@@ -28,7 +28,7 @@ DailyLog.init(
     },
     date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     expected_weight: {
       type: DataTypes.DECIMAL(6, 2),
@@ -81,8 +81,8 @@ DailyLog.init(
   },
   {
     sequelize,
-    modelName: 'DailyLog',
-    tableName: 'DailyLogs',
+    modelName: 'dailylog',
+    tableName: 'dailylogs',
     timestamps: false,
   }
 );

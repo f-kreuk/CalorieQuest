@@ -22,16 +22,13 @@
     <footer class="fixed bottom-0 w-full bg-gray-300 p-4">
         <nav class="text-center">
             <ul class="flex justify-center">
-                  {{#if logged_in}}
+                {{#if logged_in}}
                 <a href="/profile">Profile</a>|
                  <li><button class="no-button" id="logout">Logout</button></li>
                  {{else}}
                 <li><a href="/login"></a></li>
                 {{/if}}
-           
-                {{!-- <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li> --}}
+
              </ul>
         </nav>
         <p>&copy; 2023 CalorieQuest{{ currentYear }} {{ siteTitle }}</p>

@@ -19,6 +19,10 @@ Quest.init(
       type: DataTypes.FLOAT,
       allowNull: true,
     },
+    quest_length: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
     height_ft: {
       type: DataTypes.FLOAT,
       allowNull: true,

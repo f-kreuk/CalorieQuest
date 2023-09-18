@@ -9,15 +9,18 @@
     <div class="row">
 
       <div class="col-md-9">
-        <h3 class="startingWeight">Starting Weight: {{starting_weight}}</h3>
-        <h3 class="expectedWeight">Expected Weight: {{expected_final_weight}}</h3>
-        <h3 class="dailyLossGoal">Daily Loss Goal: {{daily_loss_goal}}</h3>
-        <h3 class="dailyLossActual">Actual Daily Loss: {{daily_loss_actual}}</h3>
-        <h3 class="actualToGoal">Actual Loss vs. Goal: {{actual_to_goal}}</h3>
+        <h3 class="startingWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Starting Weight:</span> {{starting_weight}} lbs</h3>
+        <br>
+        <h3 class="goalWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Goal Weight:</span> {{goal_weight}} lbs</h3>
+        <br>
+        <h3 class="age rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Age:</span> {{age}}</h3>
+        <br>
+        <h3 class="gender rounded-md bg-slate-100 align-middle py-3 indent-3"><span class ="profile-name">Gender:</span> {{gender}}</h3>
+
       </div>
 
       <div class="col-md-3">
-        <h2>PROGRESS</h2>
+        <h2></h2>
         <p class="progress">{{progress}}</p>
       </div>
     
@@ -56,4 +59,24 @@
     </form>
   </div>  
   
+<div class="col-md-6">
+    {{#if dailylogs.length}}
+    <div class="col-md-6 quest-list">
+      <h2 class="b"><span class="profile-name font-bold">DAILY LOGS</span></h2>
+      <br>
+
+      {{#each dailylogs as |dailylog|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4>Date: {{dailylog.date}}</h4>
+            <p>Weight: {{dailylog.weight}} lbs</p>
+            <p>Calories Consumed: {{dailylog.calories_consumed}}</p>
+            <p>Days Exercised: {{dailylog.exercise}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+
 </div>
