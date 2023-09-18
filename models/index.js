@@ -4,7 +4,7 @@ const DailyLog = require('./DailyLog');
 
 User.hasMany(Quest, {
     foreignKey: 'user_id',
-    onDelete: 'Cascade'
+    onDelete: 'CASCADE'
 });
 
 Quest.belongsTo(User, {
@@ -13,7 +13,7 @@ Quest.belongsTo(User, {
 
 Quest.hasMany(DailyLog, {
     foreignKey: 'quest_id',
-    onDelete: 'Cascade'
+    onDelete: 'CASCADE'
 });
 
 DailyLog.belongsTo(Quest, {

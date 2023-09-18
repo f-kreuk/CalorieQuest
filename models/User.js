@@ -35,52 +35,56 @@ User.init(
         len: [8],
       },
     },
-    startDate: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    startingWeight: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
-    heightFeet: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
-    heightInches: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    gender: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    birthDate: {
-      type: DataTypes.DATE,
-      allowNull: true,
-    },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    heightCentimeters: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    allQuests: {
-      type: DataTypes.JSON,
-      defaultValue: { active: [], past: [] },
-    },
-    activeQuest: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
+    // startDate: {
+    //     type: DataTypes.STRING,
+    //     allowNull: true,
+    // },
+    // startingWeight: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: true,
+    // },
+    // heightFeet: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: true,
+    // },
+    // heightInches: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
+    // gender: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // birthDate: {
+    //   type: DataTypes.DATE,
+    //   allowNull: true,
+    // },
+    // age: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
+    // heightCentimeters: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
+    // allQuests: {
+    //   type: DataTypes.JSON,
+    //   defaultValue: { active: [], past: [] },
+    // },
+    // activeQuest: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
       },
     },
     sequelize,

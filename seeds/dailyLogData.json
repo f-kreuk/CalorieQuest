@@ -1,8 +1,8 @@
 [
     {
-       "dailyLogid": "1",
-       "questid": "1",
-       "userid": "1",
+       "id": "1",
+       "quest_id": "1",
+       "user_id": "1",
        "date": "01/23/23",
        "expectedWeight": "230",
        "weight": "235",
@@ -18,9 +18,9 @@
        "actualToDeficit": "200"
     },
     {
-        "dailyLogid": "2",
-        "questid": "1",
-        "userid": "1",
+        "id": "2",
+        "quest_id": "1",
+        "user_id": "1",
         "date": "01/23/23",
         "expectedWeight": "230",
         "weight": "235",
@@ -36,9 +36,9 @@
         "actualToDeficit": "200"
      },
      {
-        "dailyLogid": "3",
-        "questid": "1",
-        "userid": "2",
+        "id": "3",
+        "quest_id": "1",
+        "user_id": "2",
         "date": "01/23/23",
         "expectedWeight": "230",
         "weight": "235",
@@ -54,9 +54,9 @@
         "actualToDeficit": "200"
      },
      {
-        "dailyLogid": "2",
-        "questid": "1",
-        "userid": "2",
+        "id": "2",
+        "quest_id": "1",
+        "user_id": "2",
         "date": "01/23/23",
         "expectedWeight": "230",
         "weight": "235",
