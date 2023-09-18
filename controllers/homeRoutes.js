@@ -46,7 +46,7 @@ router.get('/quest/:id', async (req, res) => {
     });
 
     const quest2 = quest.get({ plain: true});
-    console.log(dailylogs);
+    //console.log(dailylogs);
 
     res.render('quest', { 
       ...quest2,
