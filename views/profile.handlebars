@@ -7,16 +7,16 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
+          <p>Enter your starting date below.</p>
+       </div>
+        <div class="form-group">
+          <input class="form-input" type="date" id="starting_date" name="starting_date"/>
+       </div>
+        <div class="form-group">
           <input class="form-input" type="number" step="1" id="height_ft" name="height_ft" placeholder="Height (ft)"/>
         </div>
         <div class="form-group">
           <input class="form-input" type="number" step="1" id="height_in" name="height_in" placeholder="Height (in)"/>
-        </div>
-        <div class="form-group">
-          <select class="form-input" type="text" id="gender" name="gender" placeholder="Gender"/>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            </select>
         </div>
         <div class="form-group">
           <input class="form-input" type="number" step="1" id="age" name="age" placeholder="Age"/>
@@ -25,11 +25,14 @@
         
       <div class="col-md-6">
         <div class="form-group">
-          <p>Enter the starting date for your quest below.</p>
+          <p>Enter your gender below.</p>
        </div>
         <div class="form-group">
-          <input class="form-input" type="date" id="starting_date" name="starting_date"/>
-       </div>
+          <select class="form-input" type="text" id="gender" name="gender" placeholder="Gender"/>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            </select>
+        </div>
         <div class="form-group">
           <input class="form-input" type="number" id="starting_weight" step="0.01" name="starting_weight" placeholder="Starting Weight (lbs)"/>
        </div>
@@ -42,6 +45,9 @@
      </div>
 
       <div class="col-md-12">
+        <div class="form-group">
+          <p>Once you have added your height, age, starting weight, goal weight, and quest length, select <span class = "profile-name font-bold">New Quest</span> to launch your weight-loss journey.</p>
+       </div>
         <div class="form-group">
           <button class="btn btn-primary" type="submit">NEW QUEST</button>
         </div>
