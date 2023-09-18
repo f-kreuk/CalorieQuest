@@ -27,7 +27,7 @@ const sess = {
 
 app.use(session(sess));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
