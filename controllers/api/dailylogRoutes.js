@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { DailyLog, Quest, User } = require('../models');
-const withAuth = require('../utils/auth');
+const { DailyLog, Quest, User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // Display the form to create a new daily log
 router.get('/new', withAuth, async (req, res) => {
