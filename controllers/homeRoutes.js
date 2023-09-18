@@ -44,16 +44,16 @@ router.get('/quest/:id', async (req, res) => {
         quest_id: questId,
       },
     });
-
+// console.log(dailylogs);
     const quest2 = quest.get({ plain: true});
-    //console.log(dailylogs);
+    const dailylogs2 = dailylogs.map((dailylog) => dailylog.get({ plain: true }));
+    // const dailylogs2 = dailylogs.get({ plain: true});
+    console.log(dailylogs2);
 
     res.render('quest', { 
       ...quest2,
-      quest,
-      dailylogs,
+      dailylogs2,
       logged_in: req.session.logged_in });
-      console.log(dailylogs); 
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
