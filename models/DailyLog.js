@@ -7,15 +7,16 @@ DailyLog.init(
   {
     dailyLogID: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     quest_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: 'quest',
-          key: 'id',
-          unique: false,
+        model: 'quest',
+        key: 'id',
+        unique: false,
       },
     },
     user_id: {
@@ -25,22 +26,61 @@ DailyLog.init(
         key: 'id',
       },
     },
-    date: DataTypes.DATE,
-    expectedWeight: DataTypes.DECIMAL(6, 2),
-    weight: DataTypes.DECIMAL(6, 2),
-    caloriesConsumed: DataTypes.INTEGER,
-    exercise: DataTypes.DECIMAL(6, 2),
-    dailyWeightLoss: DataTypes.DECIMAL(6, 2),
-    bmr: DataTypes.DECIMAL(6, 2),
-    adjustedBMR: DataTypes.DECIMAL(6, 2),
-    exerciseReference: DataTypes.DECIMAL(6, 2),
-    dailyGoal: DataTypes.DECIMAL(6, 2),
-    targetCalories: DataTypes.INTEGER,
-    calorieDeficit: DataTypes.INTEGER,
-    actualToDeficit: DataTypes.DECIMAL(6, 2),
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    expectedWeight: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    weight: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    caloriesConsumed: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    exercise: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    dailyWeightLoss: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    bmr: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    adjustedBMR: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    exerciseReference: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    dailyGoal: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
+    targetCalories: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    calorieDeficit: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    actualToDeficit: {
+      type: DataTypes.DECIMAL(6, 2),
+      allowNull: true,
+    },
   },
   {
-    sequelize, 
+    sequelize,
     modelName: 'DailyLog',
     tableName: 'DailyLogs',
     timestamps: false,
