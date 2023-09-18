@@ -46,12 +46,14 @@ router.get('/quest/:id', async (req, res) => {
     });
 
     const quest2 = quest.get({ plain: true});
+    console.log(dailylogs);
 
     res.render('quest', { 
       ...quest2,
-      quest, 
+      quest,
       dailylogs,
-      logged_in: req.session.logged_in }); 
+      logged_in: req.session.logged_in });
+      console.log(dailylogs); 
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');

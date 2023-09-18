@@ -28,11 +28,12 @@ const newFormHandler = async (event) => {
         const dateForDailyLog = new Date(startDate);
         dateForDailyLog.setDate(startDate.getDate()+i);
         const formattedDate = dateForDailyLog.toISOString().slice(0, 10);
+        const counter = i + 1;
 
 
         const dailyLogResponse = await fetch(`/api/dailylogs`, {
           method: 'POST',
-          body: JSON.stringify({ quest_id: questId, date: formattedDate}),
+          body: JSON.stringify({ quest_id: questId, date: formattedDate, counter }),
           headers: {
             'Content-Type': 'application/json',
           },

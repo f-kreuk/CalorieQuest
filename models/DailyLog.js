@@ -30,6 +30,10 @@ DailyLog.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
+    counter: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
     expected_weight: {
       type: DataTypes.DECIMAL(6, 2),
       allowNull: true,
