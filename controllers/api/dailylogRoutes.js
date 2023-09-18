@@ -5,11 +5,13 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const { quest_id, ...otherFields } = req.body;
+    const { quest_id, date, counter, ...otherFields } = req.body;
         
     const newDailyLog = await DailyLog.create({
       ...otherFields,
-      quest_id: quest_id,
+      date,
+      counter,
+      quest_id,
       user_id: req.session.user_id,
 });
     res.status(200).json(newDailyLog);
