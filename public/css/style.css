@@ -22,3 +22,22 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.profile-name {
+  color: #063572;
+  font-weight: bold;
+}
+
+  #gender::placeholder,
+  #starting_date::placeholder {
+    font-family: inherit;
+    /* 1 */
+    font-size: 1rem;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+  }
+
+  

@@ -1,0 +1,105 @@
+
+<div class="row">
+  <div class="col-md-6">
+  <h2><span class = "profile-name font-bold">{{name}}</span>, submit your current information and launch a new Quest!</h2>
+ 
+ <form class="form new-quest-form">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <p>Enter starting date below.</p>
+       </div>
+        <div class="form-group">
+          <input class="form-input" type="date" id="starting_date" name="starting_date"/>
+       </div>
+        <div class="form-group">
+          <input class="form-input" type="number" step="1" id="height_ft" name="height_ft" placeholder="Height (ft)"/>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="number" step="1" id="height_in" name="height_in" placeholder="Height (in)"/>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="number" step="1" id="age" name="age" placeholder="Age"/>
+        </div>
+      </div>
+        
+      <div class="col-md-6">
+        <div class="form-group">
+          <p>Enter your gender below.</p>
+       </div>
+        <div class="form-group">
+          <select class="form-input" type="text" id="gender" name="gender" placeholder="Gender"/>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="number" id="starting_weight" step="0.01" name="starting_weight" placeholder="Starting Weight (lbs)"/>
+       </div>
+        <div class="form-group">
+         <input class="form-input" type="number" id="goal_weight" name="goal_weight" step="0.01" placeholder="Goal Weight (lbs)"/>
+       </div>
+        <div class="form-group">
+         <input class="form-input" type="number" id="quest_length" name="quest_length" step="0." placeholder="Quest Length (days)"/>
+       </div>
+     </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <p>Once you have added your height, age, starting weight, goal weight, and quest length, select <span class = "profile-name font-bold">New Quest</span> to launch your weight-loss journey.</p>
+       </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">NEW QUEST</button>
+        </div>
+      </div>
+    </div>
+  </form>     
+  </div>
+  
+  <div class="col-md-6">
+    {{#if quests.length}}
+    <div class="col-md-12 quest-list">
+      <h2 class="b"><span class = "profile-name font-bold">QUESTS</span></h2>
+      <br>
+
+    {{#each quests as |quest|}}
+      {{#if quest.active}}
+      <div class="row mb-2">
+        <div class="col-md-8 rounded-md bg-slate-100 align-middle">
+          <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
+        </div>
+      </div>
+      {{/if}}
+    {{/each}}
+
+        {{#each quests as |quest|}}
+      {{#unless quest.active}}
+      <div class="row mb-2">
+        <div class="col-md-8 rounded-md bg-neutral-300 align-middle">
+          <h4><a href="/quest/{{quest.id}}"><span class = "profile-name font-bold">{{quest.date_label}} Quest</span> - Goal: {{quest.goal_weight}}lbs</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{quest.id}}">DELETE</button>
+        </div>
+      </div>
+      {{/unless}}
+    {{/each}}
+
+    </div>
+    {{/if}}
+
+  </div>      
+</div>
+
+<script src="./js/profile.js"></script>
+
+
+
+
+
+
+
+

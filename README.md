@@ -120,7 +120,7 @@ Gain insights into your calorie consumption and exercise patterns over time with
 - Victor Nieves
 - Florian Kreuk
 - Maya Mccann
-- Charles Mandenhall
+- Charles Mendenhall
 
 ## License
 
