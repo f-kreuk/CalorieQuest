@@ -14,6 +14,7 @@ Calorie Quest is a web-based calorie tracker app designed to help users manage t
     - [1. Registration](#1-registration)
     - [2. Setting Goals](#2-setting-goals)
     - [3. Daily Log](#3-daily-log)
+  - [Screenshots](#screenshots)
     - [4. BMR Calculation](#4-bmr-calculation)
     - [5. Progress Tracking](#5-progress-tracking)
     - [6. Data Analysis](#6-data-analysis)
@@ -97,6 +98,19 @@ To log your daily data, including calories consumed and exercise:
    - **Calories Consumed**: The total number of calories you consumed.
    - **Exercise**: Indicate whether you exercised on that day (e.g., Yes/No).
 4. Save your daily log entry.
+
+## Screenshots
+
+Here are some screenshots of Calorie Quest in action:
+
+![Screenshot 1](public/assets/Screenshot1.png)
+*Login page*
+
+![Screenshot 2](/public/assets/Screenshot2.png)
+*Profile page 2*
+
+![Screenshot 3](/public/assets/Screenshot3.png)
+*Active quest page*
 
 ### 4. BMR Calculation
 
