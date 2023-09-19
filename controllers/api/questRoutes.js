@@ -34,8 +34,20 @@ router.post('/', withAuth, async (req, res) => {
     const roundedDailyLossGoal = Math.round(dailyLossGoal * 100) / 100;
     const numroundedDailyLossGoal = parseFloat(roundedDailyLossGoal);
     
+    //code for calculating BMR
+    // Men: BMR = 88.362 + (13.397 x weight in kg) + (4.799 x height in cm) – (5.677 x age in years) 
+    // Women: BMR = 447.593 + (9.247 x weight in kg) + (3.098 x height in cm) – (4.330 x age in years)
+    let bmr2;
+    const gender = req.body.gender;
+    if (gender === 'male') {
+      bmr2 = 88.362 + (13.397 * numroundedWeightKg) + (4.799 * heightInCm) - (5.677 * req.body.age);
+    } else {
+      bmr2 = 447.593 + (9.247 * numroundedWeightKg) + (3.098 * heightInCm) - (4.330 * req.body.age);
+    };
+
     const newQuest = await Quest.create({
       ...otherFields,
+      bmr: bmr2,
       daily_loss_goal: numroundedDailyLossGoal,
       starting_weight_kg: numroundedWeightKg,
       date_label: monthDate,
