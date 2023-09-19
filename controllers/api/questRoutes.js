@@ -26,9 +26,17 @@ router.post('/', withAuth, async (req, res) => {
     const roundedWeightKg = Math.round(startingWeightKg * 100) / 100;
     const numroundedWeightKg = parseFloat(roundedWeightKg);
 
+    //code for calculating the daily_loss_goal
+    const goalWeight = parseFloat(req.body.goal_weight) || 0;
+    const questLength = parseFloat(req.body.quest_length) || 0;
+    const totalGoalLoss = (startingWeight - goalWeight);
+    const dailyLossGoal = (totalGoalLoss / questLength);
+    const roundedDailyLossGoal = Math.round(dailyLossGoal * 100) / 100;
+    const numroundedDailyLossGoal = parseFloat(roundedDailyLossGoal);
     
     const newQuest = await Quest.create({
       ...otherFields,
+      daily_loss_goal: numroundedDailyLossGoal,
       starting_weight_kg: numroundedWeightKg,
       date_label: monthDate,
       height_centimeters: heightInCm,
