@@ -30,6 +30,10 @@ DailyLog.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
+    formatted_date: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     counter: {
       type: DataTypes.INTEGER,
       allowNull: true,
