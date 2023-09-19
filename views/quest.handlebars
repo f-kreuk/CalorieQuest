@@ -6,28 +6,21 @@
 
 
     <div class="row">
-
-      <div class="col-md-9">
+      <div class="col-md-12">
         <h3 class="startingWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span
-            class="profile-name">Starting Weight:</span> {{starting_weight}} lbs</h3>
+            class="profile-name">Starting Weight:</span> {{starting_weight}} lbs or {{starting_weight_kg}} kg</h3>
         <br>
         <h3 class="goalWeight rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Goal
-            Weight:</span> {{goal_weight}} lbs</h3>
+            Weight:</span> {{goal_weight}} lbs or {{daily_loss_goal}} lbs-lost/day</h3>
         <br>
-        <h3 class="age rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Age:</span>
-          {{age}}</h3>
+        <h3 class="age rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Demographic:</span>
+          {{age}} year old {{gender}}</h3>
         <br>
-        <h3 class="gender rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Gender:</span>
+        <h3 class="gender rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Basal Metabolic Rate:</span>
           {{gender}}</h3>
           <br>
         <h3 class="quest_length rounded-md bg-slate-100 align-middle py-3 indent-3"><span class="profile-name">Quest Length:</span>
           {{quest_length}} days</h3>
-
-      </div>
-
-      <div class="col-md-3">
-        <h2></h2>
-        <p class="progress">{{progress}}</p>
       </div>
 
     </div>
@@ -36,7 +29,7 @@
   <div class="col-md-6">
     <form class="form dailyLog-form">
       <div class="form-group">
-      <label for="exercise" class="text-base">Select dailylog to update.</label>
+      <label for="exercise" class="text-base">Select Daily Log to update.</label>
       <select class="form-input" id="counter" name="counter" placeholder="counter">
         {{#each dailylogs2 as |dailylog|}}
           <option value={{counter}}>{{counter}}</option>
