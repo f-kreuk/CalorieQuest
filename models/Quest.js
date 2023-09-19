@@ -19,6 +19,10 @@ Quest.init(
       type: DataTypes.FLOAT,
       allowNull: true,
     },
+    bmr: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+    },
     quest_length: {
       type: DataTypes.FLOAT,
       allowNull: true,
