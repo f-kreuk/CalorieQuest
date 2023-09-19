@@ -19,9 +19,17 @@ router.post('/', withAuth, async (req, res) => {
     const cmPerInch = 2.54;
     const heightInCm = (heightFt * cmPerFoot) + (heightIn * cmPerInch);
 
+    //code for converting starting_weight into starting_weight_kg
+    const startingWeight = parseFloat(req.body.starting_weight) || 0;
+    const lbPerKg = 2.20462;
+    const startingWeightKg = (startingWeight / lbPerKg);
+    const roundedWeightKg = Math.round(startingWeightKg * 100) / 100;
+    const numroundedWeightKg = parseFloat(roundedWeightKg);
+
     
     const newQuest = await Quest.create({
       ...otherFields,
+      starting_weight_kg: numroundedWeightKg,
       date_label: monthDate,
       height_centimeters: heightInCm,
       active: true,
