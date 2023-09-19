@@ -6,6 +6,8 @@ Calorie Quest is a web-based calorie tracker app designed to help users manage t
 - [Calorie Quest](#calorie-quest)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
+  - [Live Demo](#live-demo)
+  - [Repository](#repository)
   - [Technologies Used](#technologies-used)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
@@ -27,6 +29,14 @@ Calorie Quest is a web-based calorie tracker app designed to help users manage t
 - Progress tracking with charts and graphs
 - Data analysis for insights
 - User-friendly and responsive design
+
+## Live Demo
+
+You can try out the live version of Calorie Quest on Heroku: [Calorie Quest on Heroku](https://calorie-quest-87555c29dfe4.herokuapp.com/)
+
+## Repository
+
+You can find the source code for Calorie Quest on GitHub: [GitHub Repository](https://github.com/f-kreuk/CalorieQuest)
 
 ## Technologies Used
 
