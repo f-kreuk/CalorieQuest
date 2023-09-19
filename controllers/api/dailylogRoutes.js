@@ -7,8 +7,17 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const { quest_id, date, counter, ...otherFields } = req.body;
         
+//code for converting date into formatted_date for dailylog label
+  const formatted_date = new Date(date).toLocaleDateString('en-US', {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
     const newDailyLog = await DailyLog.create({
       ...otherFields,
+      formatted_date,
       date,
       counter,
       quest_id,
